@@ -50,6 +50,6 @@ O sistema foi modelado com as seguintes entidades:
 
 Este projeto tem fins educacionais e foi desenvolvido como parte do meu processo de aprendizado em Análise e Desenvolvimento de Sistemas.
 
-## 🚀 Autor
+## 👨‍💻 Autor
 
-Desenvolvido por [Sidne]
+Sidne
