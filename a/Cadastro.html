@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Static/Css/Style.css">
+    <link rel="stylesheet" href="../Static/Css/StyleCadastro.css">
+    <title>PizzariaPostgreSQL</title>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <img src="../Static/Img/pizzarialogo.png" alt="Logo da Pizzaria" class="logo">
+
+            <nav class="links">
+                <a href="Index.html" target="_self" rel="noopener noreferrer">Home</a>
+                <a href="Cardapio.html" target="_self" rel="noopener noreferrer">Cardápio</a>
+                <a href="Pedido.html" target="_self" rel="noopener noreferrer">Pedido</a>
+            </nav>         
+            <nav class="direita">
+                <a href="Cadastro.html" target="_self" rel="noopener noreferrer">Cadastro</a>|
+                <a href="Login.html" target="_self" rel="noopener noreferrer">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <form class="Cadastro" action="#" method="post">
+        <h1>Cadastro</h1>
+        <div class="CamposCadastro">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required>
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" maxlength="11" required>
+        </div>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <footer class="Footer">
+        <p class="Pfooter">© 2026 Projeto Pizzaria PostgreSQL. <br>Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

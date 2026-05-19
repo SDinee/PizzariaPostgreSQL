@@ -1,0 +1,60 @@
+.Cadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    background-color: #ffc802 ;
+    padding: 50px;
+    border-radius: 10px;    
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-block-end: 200px;
+}
+
+.Cadastro h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+.CamposCadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-top: 30px;
+    width: 100%;
+
+}
+
+.CamposCadastro label {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.CamposCadastro input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 90%;
+}
+
+.Cadastro button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Cadastro button:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}

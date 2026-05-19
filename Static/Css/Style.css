@@ -1,0 +1,103 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(222, 178, 4);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    background-color: #ffce09;
+    box-shadow: #ffce11 0px 4px 8px;
+}
+
+
+/* logo fica na esquerda */
+.menu img {
+    width: 120px;
+}
+
+/* menu fica exatamente no meio */
+.links {
+    position: absolute;     /* tira do fluxo normal */
+    left: 50%;              /* joga pro meio */
+    transform: translateX(-50%); /* centraliza de verdade */
+    display: flex;
+    gap: 50px;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    transform: scale(1.2);
+}
+
+.direita {
+    margin-left: auto; /* empurra pro canto direito */
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    background-color: aqua;
+}
+
+.direita a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.direita a:hover {
+    transform: scale(1.2);
+}
+
+.LogoPizza {
+    display: block; /* tira o comportamento inline da imagem */
+    margin: 50px auto; /* centraliza horizontalmente e dá uma margem vertical */
+    width: 300px;
+}
+
+.Promocao{
+    display: flex;
+    margin: auto;
+    gap: 20px;
+}
+
+.Promocao img {
+    width: 200px;
+    height: 200px;
+}
+
+.Promocao div {
+    margin: 20px;
+    margin-top: 30px;
+    background-color: #ffce00;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.Preco {
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+}
+
+.Footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}

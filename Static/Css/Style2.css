@@ -1,0 +1,33 @@
+.H1Logo{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.Plogo {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.H2Logo{
+    font-size: 30px;
+    margin-top: 70px;
+}
+
+.Hsobre{
+    font-size: 25px;
+    margin-top: 70px;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.Psobre{
+    margin-top: 50px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
