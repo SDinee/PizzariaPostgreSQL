@@ -1,10 +1,8 @@
-# 🍕 Sistema de Pizzaria - PostgreSQL
+# 🍕 Sistema de Pizzaria - Full Stack (Flask + PostgreSQL)
 
-Projeto desenvolvido com o objetivo de praticar modelagem de banco de dados relacional utilizando PostgreSQL.
+Projeto desenvolvido com o objetivo de praticar o desenvolvimento full stack utilizando Flask (Python), PostgreSQL, HTML e CSS, enquanto ainda estou em processo de aprendizado das tecnologias.
 
-## 📚 Objetivo
-
-Este projeto tem como foco o aprendizado e aplicação de conceitos fundamentais de banco de dados, incluindo criação de tabelas, relacionamentos e regras de integridade.
+---
 
 ## 🧠 Conceitos aplicados
 
@@ -15,6 +13,8 @@ Este projeto tem como foco o aprendizado e aplicação de conceitos fundamentais
 * Uso de `UNIQUE` para evitar duplicidade de dados
 * Tipos de dados adequados (VARCHAR, CHAR, NUMERIC, TIMESTAMP)
 
+---
+
 ## 🗂️ Estrutura do Banco
 
 O sistema foi modelado com as seguintes entidades:
@@ -24,6 +24,8 @@ O sistema foi modelado com as seguintes entidades:
 * **produtos** → Lista de produtos disponíveis
 * **itens_pedido** → Relaciona pedidos e produtos (itens do pedido)
 
+---
+
 ## 🔗 Relacionamentos
 
 * Um usuário pode ter vários pedidos
@@ -31,6 +33,8 @@ O sistema foi modelado com as seguintes entidades:
 * Um pedido pode conter vários produtos
 * Produtos não podem ser removidos se já estiverem vinculados a pedidos
 * Ao excluir um pedido, seus itens são removidos automaticamente
+
+---
 
 ## ⚙️ Regras de negócio implementadas
 
@@ -41,14 +45,36 @@ O sistema foi modelado com as seguintes entidades:
 * Quantidade de itens deve ser maior que zero
 * Preço dos produtos não pode ser negativo
 
+---
+
 ## 🛠️ Tecnologias utilizadas
 
 * PostgreSQL
 * SQL
+* HTML
+* CSS
+
+---
+
+## 🌐 Interface do sistema (Frontend)
+
+O projeto também conta com páginas iniciais desenvolvidas em HTML e CSS:
+
+* Criado **Index.html** como página inicial com mensagem de boas-vindas e promoções do dia
+* Criado **Cadastro.html** para registro de usuários com campos de nome, email, senha, telefone, endereço e CPF
+* Criado **Login.html** para autenticação de usuários com campos de nome e senha
+* Criado **Cardapio.html** para exibição do cardápio com links de navegação
+* Criado **Pedido.html** para realização de pedidos com links de navegação
+* Adicionada **PizzariaLogo.png** como logotipo do projeto
+* Incluídos arquivos CSS para estilização das páginas
+
+---
 
 ## 📌 Observações
 
 Este projeto tem fins educacionais e foi desenvolvido como parte do meu processo de aprendizado em Análise e Desenvolvimento de Sistemas.
+
+---
 
 ## 👨‍💻 Autor
 
