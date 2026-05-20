@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Static/Css/Style.css">
-    <link rel="stylesheet" href="../Static/Css/StyleLogin.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylelogin.css')}}">
     <title>PizzariaPostgreSQL</title>
 </head>
 <body>
     <header>
         <div class="menu">
-            <img src="../Static/Img/pizzarialogo.png" alt="Logo da Pizzaria" class="logo">
+            <img src="{{ url_for('static', filename='img/pizzarialogo.png') }}" alt="Logo da Pizzaria" class="logo">
+
 
             <nav class="links">
-                <a href="Index.html" target="_self" rel="noopener noreferrer">Home</a>
-                <a href="Cardapio.html" target="_self" rel="noopener noreferrer">Cardápio</a>
-                <a href="Pedido.html" target="_self" rel="noopener noreferrer">Pedido</a>
+                <a href="{{ url_for('home') }}" target="_self" rel="noopener noreferrer">Home</a>
+                <a href="{{ url_for('cardapio') }}" target="_self" rel="noopener noreferrer">Cardápio</a>
+                <a href="{{ url_for('pedido')}}" target="_self" rel="noopener noreferrer">Pedido</a>
             </nav>         
             <nav class="direita">
-                <a href="Cadastro.html" target="_self" rel="noopener noreferrer">Cadastro</a>|
-                <a href="Login.html" target="_self" rel="noopener noreferrer">Login</a>
+                <a href="{{ url_for('cadastro') }}" target="_self" rel="noopener noreferrer">Cadastro</a>|
+                <a href="{{ url_for('login') }}" target="_self" rel="noopener noreferrer">Login</a>
             </nav>
         </div>
     </header>

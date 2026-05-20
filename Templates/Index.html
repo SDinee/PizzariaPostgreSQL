@@ -3,48 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Static/Css/Style.css">
-    <link rel="stylesheet" href="../Static/Css/Style2.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
     <title>PizzariaPostgreSQL</title>
 </head>
 <body>
     <header>
         <div class="menu">
-            <img src="../Static/Img/pizzarialogo.png" alt="Logo da Pizzaria" class="logo">
+            <img src="{{ url_for('static', filename='img/pizzarialogo.png') }}" alt="Logo da Pizzaria">
+
 
             <nav class="links">
-                <a href="Index.html" target="_self" rel="noopener noreferrer">Home</a>
-                <a href="Cardapio.html" target="_self" rel="noopener noreferrer">Cardápio</a>
-                <a href="Pedido.html" target="_self" rel="noopener noreferrer">Pedido</a>
+                <a href="{{ url_for('home') }}" target="_self" rel="noopener noreferrer">Home</a>
+                <a href="{{ url_for('cardapio') }}" target="_self" rel="noopener noreferrer">Cardápio</a>
+                <a href="{{ url_for('pedido')}}" target="_self" rel="noopener noreferrer">Pedido</a>
             </nav>         
             <nav class="direita">
-                <a href="Cadastro.html" target="_self" rel="noopener noreferrer">Cadastro</a>|
-                <a href="Login.html" target="_self" rel="noopener noreferrer">Login</a>
+                <a href="{{ url_for('cadastro') }}" target="_self" rel="noopener noreferrer">Cadastro</a>|
+                <a href="{{ url_for('login') }}" target="_self" rel="noopener noreferrer">Login</a>
             </nav>
         </div>
     </header>
 
     <h1 class="H1Logo">Bem-vindo à Pizzaria PostgreSQL!</h1>
-    <img src="../Static/Img/Pizza.png" alt="Logo da Pizzaria" class="LogoPizza">
+    <img src="{{ url_for('static', filename='img/pizza.png') }}" alt="Logo da Pizzaria" class="LogoPizza">
     <p class="Plogo">As melhores pizzas da cidade 🍕</p>
 
     <h2 class="H2Logo">Promoções do Dia</h2>
 
     <div class="Promocao">
         <div>
-            <img src="../Static/Img/PizzaMargherita.png" alt="Pizza Margherita" class="promo-img">
+            <img src="{{ url_for('static', filename='img/pizzamargherita.png') }}" alt="Pizza Margherita">
             <h3>Pizza Margherita</h3>
             <p>Deliciosa pizza com molho de tomate, mussarela e manjericão.</p>
             <p class="Preco">R$ 29,90</p>
         </div>
         <div>
-            <img src="../Static/Img/PizzaPepperoni.png" alt="Pizza Pepperoni" class="promo-img">
+            <img src="{{ url_for('static', filename='img/pizzapepperoni.png') }}" alt="Pizza Pepperoni">
             <h3>Pizza Pepperoni</h3>
             <p>Pizza clássica com pepperoni, queijo e molho de tomate.</p>
             <p class="Preco">R$ 34,90</p>
         </div>
         <div>
-            <img src="../Static/Img/PizzaVegetariana.png" alt="Pizza Vegetariana" class="promo-img">
+            <img src="{{ url_for('static', filename='img/pizzavegetariana.png') }}" alt="Pizza Vegetariana">
             <h3>Pizza Vegetariana</h3>
             <p>Opção saudável com legumes frescos, queijo e molho de tomate.</p>
             <p class="Preco">R$ 31,90</p>

@@ -70,6 +70,23 @@ O projeto também conta com páginas iniciais desenvolvidas em HTML e CSS:
 
 ---
 
+### Implementação do Flask
+
+* implementadas rotas limpas no Flask (/, /cardapio, /pedido, etc.), sem necessidade de usar .html na URL.
+* Ajustados os templates para renderização via render_template() em vez de links diretos para arquivos .html.
+* Corrigida a forma de servir arquivos estáticos (CSS e imagens) utilizando url_for('static', filename='...').
+* Reorganizada a pasta static/ em subdiretórios (css/ e img/) para melhor organização.
+* Navbar atualizada para usar url_for() e manter navegação consistente entre páginas.
+* Logo e imagens agora carregadas corretamente via static/img/.
+
+- Estrutura final do projeto:
+- app.py → lógica principal do Flask
+- templates/ → páginas HTML renderizadas
+- static/css/ → arquivos de estilo
+- static/img/ → imagens e logotipo
+
+---
+
 ## 📌 Observações
 
 Este projeto tem fins educacionais e foi desenvolvido como parte do meu processo de aprendizado em Análise e Desenvolvimento de Sistemas.
