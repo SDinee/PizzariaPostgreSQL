@@ -53,6 +53,7 @@ O sistema foi modelado com as seguintes entidades:
 * SQL
 * HTML
 * CSS
+* Python / Flask
 
 ---
 
@@ -84,6 +85,8 @@ O projeto também conta com páginas iniciais desenvolvidas em HTML e CSS:
 - templates/ → páginas HTML renderizadas
 - static/css/ → arquivos de estilo
 - static/img/ → imagens e logotipo
+- routes/ → separar rotas de cadastro, login e mercadoria.
+- database/ → para armazenar scripts SQL e o módulo db.py responsável pela conexão com o PostgreSQL.
 
 ---
 
