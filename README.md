@@ -79,7 +79,7 @@ O projeto também conta com páginas iniciais desenvolvidas em HTML e CSS:
 * Navbar atualizada para usar url_for() e manter navegação consistente entre páginas.
 * Logo e imagens agora carregadas corretamente via static/img/.
 
-## Estrutura final do projeto:
+### Estrutura final do projeto:
 - app.py → lógica principal do Flask
 - templates/ → páginas HTML renderizadas
 - static/css/ → arquivos de estilo
