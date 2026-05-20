@@ -61,7 +61,7 @@ O projeto também conta com páginas iniciais desenvolvidas em HTML e CSS:
 
 ---
 
-### 🚀 Implementação do Flask
+### 🚀 Backend com Python/Flask
 
 * implementadas rotas limpas no Flask (/, /cardapio, /pedido, etc.), sem necessidade de usar .html na URL.
 * Ajustados os templates para renderização via render_template() em vez de links diretos para arquivos .html.
