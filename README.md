@@ -47,16 +47,6 @@ O sistema foi modelado com as seguintes entidades:
 
 ---
 
-## 🛠️ Tecnologias utilizadas
-
-* PostgreSQL
-* SQL
-* HTML
-* CSS
-* Python / Flask
-
----
-
 ## 🌐 Interface do sistema (Frontend)
 
 O projeto também conta com páginas iniciais desenvolvidas em HTML e CSS:
@@ -87,6 +77,16 @@ O projeto também conta com páginas iniciais desenvolvidas em HTML e CSS:
 - static/img/ → imagens e logotipo
 - routes/ → separar rotas de cadastro, login e mercadoria.
 - database/ → para armazenar scripts SQL e o módulo db.py responsável pela conexão com o PostgreSQL.
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+* PostgreSQL
+* SQL
+* HTML
+* CSS
+* Python / Flask
 
 ---
 
