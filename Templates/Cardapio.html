@@ -14,13 +14,13 @@
 
 
             <nav class="links">
-                <a href="{{ url_for('home') }}" target="_self" rel="noopener noreferrer">Home</a>
-                <a href="{{ url_for('cardapio') }}" target="_self" rel="noopener noreferrer">Cardápio</a>
-                <a href="{{ url_for('pedido')}}" target="_self" rel="noopener noreferrer">Pedido</a>
+                <a href="{{ url_for('home.home') }}" target="_self" rel="noopener noreferrer">Home</a>
+                <a href="{{ url_for('cardapio.cardapio') }}" target="_self" rel="noopener noreferrer">Cardápio</a>
+                <a href="{{ url_for('pedido.pedido')}}" target="_self" rel="noopener noreferrer">Pedido</a>
             </nav>         
             <nav class="direita">
-                <a href="{{ url_for('cadastro') }}" target="_self" rel="noopener noreferrer">Cadastro</a>|
-                <a href="{{ url_for('login') }}" target="_self" rel="noopener noreferrer">Login</a>
+                <a href="{{ url_for('cadastro.cadastro') }}" target="_self" rel="noopener noreferrer">Cadastro</a>|
+                <a href="{{ url_for('login.login') }}" target="_self" rel="noopener noreferrer">Login</a>
             </nav>
         </div>
     </header>

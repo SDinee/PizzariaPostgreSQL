@@ -1,10 +1,10 @@
 import psycopg2
 
-def ObterConexao():
+def get_connection():
         return psycopg2.connect(
-        dbname="NomeBanco",
+        dbname="",
         user="postgres",
-        password="SUA_SENHA",
+        password="",
         host="localhost",
         port="5432"
     )

@@ -1,26 +1,17 @@
-from flask import Flask, render_template
+from flask import Flask
+from routes.home import home_bp
+from routes.cardapio import cardapio_bp
+from routes.pedido import pedido_bp
+from routes.cadastro import cadastro_bp
+from routes.login import login_bp
 
 app = Flask(__name__)
 
-@app.route("/")
-def home():
-    return render_template("index.html")
+app.register_blueprint(home_bp)
+app.register_blueprint(cardapio_bp)
+app.register_blueprint(pedido_bp)
+app.register_blueprint(cadastro_bp)
+app.register_blueprint(login_bp)
 
-@app.route("/cardapio")
-def cardapio():
-    return render_template("cardapio.html")
-
-@app.route("/pedido")
-def pedido():
-    return render_template("pedido.html")
-
-@app.route("/login")
-def login():
-    return render_template("login.html")
-
-@app.route("/cadastro")
-def cadastro():
-    return render_template("cadastro.html")
-    
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

@@ -58,3 +58,14 @@
     background-color: #555;
     transform: scale(1.1);
 }
+
+/*Indicação de Obrigatório*/
+label:has(+input:required)::after{
+    content:'*';
+    color: red;
+}
+/*Indicação de Opcional*/
+label:has(+input:optional)::after{
+    content: "(Opcional)";
+    margin-left: 4px;
+}

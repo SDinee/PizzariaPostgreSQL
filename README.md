@@ -69,13 +69,14 @@ O projeto também conta com páginas iniciais desenvolvidas em HTML e CSS:
 * Reorganizada a pasta static/ em subdiretórios (css/ e img/) para melhor organização.
 * Navbar atualizada para usar url_for() e manter navegação consistente entre páginas.
 * Logo e imagens agora carregadas corretamente via static/img/.
+* Implementação de Bluesprints para modularização das paginas.
 
 ### Estrutura final do projeto:
 - app.py → lógica principal do Flask
 - templates/ → páginas HTML renderizadas
 - static/css/ → arquivos de estilo
 - static/img/ → imagens e logotipo
-- routes/ → separar rotas de cadastro, login e mercadoria.
+- routes/ → separar rotas de cadastro, login e cardapio.
 - database/ → para armazenar scripts SQL e o módulo db.py responsável pela conexão com o PostgreSQL.
 
 ---
