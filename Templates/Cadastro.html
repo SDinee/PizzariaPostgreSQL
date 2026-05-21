@@ -19,25 +19,46 @@
                 <a href="{{ url_for('pedido.pedido')}}" target="_self" rel="noopener noreferrer">Pedido</a>
             </nav>         
             <nav class="direita">
+                {% if session.get("usuario_id") %}
+                    <a href="{{ url_for('login.logout') }}" target="_self" rel="noopener noreferrer">Logout</a>
+                {% else %}
                 <a href="{{ url_for('cadastro.cadastro') }}" target="_self" rel="noopener noreferrer">Cadastro</a>|
                 <a href="{{ url_for('login.login') }}" target="_self" rel="noopener noreferrer">Login</a>
+                {% endif %}
             </nav>
         </div>
     </header>
 
-    <form class="Cadastro" action="#" method="post">
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="mensagens">
+            {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endwith %}
+
+    <form class="Cadastro" action="{{ url_for('cadastro.cadastro') }}" method="post">
+
         <h1>Cadastro</h1>
         <div class="CamposCadastro">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+
             <label for="senha">Senha:</label>
             <input type="password" id="senha" name="senha" required>
+
             <label for="telefone">Telefone:</label>
             <input type="tel" id="telefone" name="telefone" required>
+
             <label for="endereco">Endereço:</label>
             <input type="text" id="endereco" name="endereco" required>
+
             <label for="cpf">CPF:</label>
             <input type="text" id="cpf" name="cpf" maxlength="11" required>
         </div>

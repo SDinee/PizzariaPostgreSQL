@@ -1,0 +1,37 @@
+.cardapio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cardapio .item {
+  width: 200px;
+  text-align: center;
+}
+
+.cardapio img {
+  width: 180px;
+  height: 180px;
+  border-radius: 8px;
+}
+
+.cardapio button {
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cardapio button:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+.cardapio span{
+    font-size: 17px;
+    color: red;
+}

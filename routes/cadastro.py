@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, redirect, url_for, flash
 from database.db import get_connection
 
 cadastro_bp = Blueprint("cadastro", __name__)
@@ -24,5 +24,7 @@ def cadastro():
         cur.close()
         conn.close()
         
-        return "Usuário cadastrado com sucesso!"
+        flash("Cadastro realizado com sucesso! Faça login para continuar.", "success")
+        return redirect(url_for("login.login"))
+    
     return render_template("cadastro.html")

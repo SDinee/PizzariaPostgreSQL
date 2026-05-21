@@ -19,13 +19,27 @@
                 <a href="{{ url_for('pedido.pedido')}}" target="_self" rel="noopener noreferrer">Pedido</a>
             </nav>         
             <nav class="direita">
+                {% if session.get("usuario_id") %}
+                    <a href="{{ url_for('login.logout') }}" target="_self" rel="noopener noreferrer">Logout</a>
+                {% else %}
                 <a href="{{ url_for('cadastro.cadastro') }}" target="_self" rel="noopener noreferrer">Cadastro</a>|
                 <a href="{{ url_for('login.login') }}" target="_self" rel="noopener noreferrer">Login</a>
+                {% endif %}
             </nav>
         </div>
     </header>
 
-    <form class="Login" action="#" method="post">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="mensagens">
+            {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endwith %}
+
+    <form class="Login" action="{{ url_for('login.login') }}" method="post">
         <h1>Login</h1>      
         <div class="CamposLogin">
             <label for="email">Email:</label>

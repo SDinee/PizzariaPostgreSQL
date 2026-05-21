@@ -7,6 +7,8 @@ from routes.login import login_bp
 
 app = Flask(__name__)
 
+app.secret_key = "JorGEAQUIproTeste"
+
 app.register_blueprint(home_bp)
 app.register_blueprint(cardapio_bp)
 app.register_blueprint(pedido_bp)

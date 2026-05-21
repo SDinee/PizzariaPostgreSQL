@@ -69,3 +69,19 @@ label:has(+input:optional)::after{
     content: "(Opcional)";
     margin-left: 4px;
 }
+
+.menu .success { 
+    color: green; 
+}
+
+.menu .error { 
+    color: red; 
+}
+
+.menu .info { 
+    color: blue; 
+}
+
+.menu .warning { 
+    color: orange; 
+}
