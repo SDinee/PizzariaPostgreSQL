@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/stylelogin.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <title>PizzariaPostgreSQL</title>
 </head>
 <body>
@@ -22,7 +24,7 @@
                 {% if session.get("usuario_id") %}
                     <a href="{{ url_for('login.logout') }}" target="_self" rel="noopener noreferrer">Logout</a>
                 {% else %}
-                <a href="{{ url_for('cadastro.cadastro') }}" target="_self" rel="noopener noreferrer">Cadastro</a>|
+                <a href="{{ url_for('cadastro.cadastro') }}" target="_self" rel="noopener noreferrer">Cadastro</a>
                 <a href="{{ url_for('login.login') }}" target="_self" rel="noopener noreferrer">Login</a>
                 {% endif %}
             </nav>

@@ -2,28 +2,26 @@
     display: flex;
     margin-top: 100px;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
-    background-color: #ffc802;
+    background-color: #f4b400;
     padding: 50px;
-    margin-left: 300px;
-    margin-right: 300px;
     border-radius: 10px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.30);
 }
 
 .Login h1 {
-    font-size: 40px;
-    font-weight: bold;
-    margin-top: 3px;
+    text-align: center;
 }
 
 .CamposLogin {
     display: flex;
     flex-direction: column;
     gap: 0px;
-    margin-top: 30px;
     width: 100%;
-
 }
 
 .CamposLogin label {
@@ -31,29 +29,38 @@
     margin-bottom: 5px;
     margin-left: 5px;
     margin-top: 10px;
+    margin-bottom: 18px;
+    font-weight: 600;
 }
 
 .CamposLogin input {
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 90%;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.CamposLogin input:focus{
+    border-color: #8b0000;
+    box-shadow: 0 0 5px rgba(139,0,0,0.4);
 }
 
 .Login button {
     margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #333;
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: #8b0000;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
+    font-weight: bold;
+    align-self: center;
 }
 
 .Login button:hover {
-    background-color: #555;
-    transform: scale(1.1);
+    box-shadow: 0 0 5px #a30000;
+    transform: scale(1.04);
 }
