@@ -78,13 +78,15 @@ O projeto também conta com páginas iniciais desenvolvidas em HTML e CSS:
 - static/img/ → imagens e logotipo
 - routes/ → separar rotas de cadastro, login e cardapio.
 - database/ → para armazenar scripts SQL e o módulo db.py responsável pela conexão com o PostgreSQL.
+- Sistema de login, com opção de logout.
+- Mensagens de feedback(Cadastro realizado com sucesso!)
+- Restrição em pedido sem login com mensagem de feedback e redirecionamento a página de login.
 
 ---
 
 ## 🛠️ Tecnologias utilizadas
 
 * PostgreSQL
-* SQL
 * HTML
 * CSS
 * Python / Flask
