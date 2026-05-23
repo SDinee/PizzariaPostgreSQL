@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <title>PizzariaPostgreSQL</title>
@@ -29,6 +30,17 @@
             </nav>
         </div>
     </header>
+
+    <h1>Seu Pedido</h1>
+    <div>
+        {% for nome, preco, imagem in itens %}
+        <p>
+            <img src="{{ url_for('static', filename='img/cardapio/' ~imagem )}}" alt="{{ nome }}">
+            {{ nome }} - R$ {{ preco }}
+        </p>
+        {% endfor %}
+    </div>
+
     <footer class="Footer">
         <p class="Pfooter">© 2026 Projeto Pizzaria PostgreSQL. <br>Todos os direitos reservados.</p>
     </footer>

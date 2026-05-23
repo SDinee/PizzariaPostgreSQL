@@ -15,12 +15,12 @@
         <div class="menu">
             <img src="{{ url_for('static', filename='img/pizzarialogo.png') }}" alt="Logo da Pizzaria" class="logo">
 
-
             <nav class="links">
                 <a href="{{ url_for('home.home') }}" target="_self" rel="noopener noreferrer">Home</a>
                 <a href="{{ url_for('cardapio.cardapio') }}" target="_self" rel="noopener noreferrer">Cardápio</a>
                 <a href="{{ url_for('pedido.pedido')}}" target="_self" rel="noopener noreferrer">Pedido</a>
-            </nav>         
+
+            </nav>          
             <nav class="direita">
                 {% if session.get("usuario_id") %}
                     <a href="{{ url_for('login.logout') }}" target="_self" rel="noopener noreferrer">Logout</a>
@@ -32,6 +32,28 @@
         </div>
     </header>
 
+    <h1>Cardápio</h1>
+    <div class="cardapio">
+        {% for nome, preco, imagem in produtos %}
+        <div class="item">
+            <img src="{{ url_for('static', filename='img/cardapio/' ~imagem) }}" alt="{{ nome }}">
+            <h3>{{ nome }}</h3>
+            <p>Preço: R$ {{ preco }}</p>
+
+            {% if session.get("usuario_id") %}
+            <form action="{{ url_for('pedido.pedido') }}" method="POST">
+                <input type="hidden" name="pizza_nome" value="{{ nome }}">
+                <button class="AddPedido" type="submit">Adicionar Pedido</button>
+            </form>
+            {% else %}
+            <a  href="{{ url_for('login.login') }}">
+                <button class="LoginRequest">Realize o login</button>
+            </a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    
     <footer class="Footer">
         <p class="Pfooter">© 2026 Projeto Pizzaria PostgreSQL. <br>Todos os direitos reservados.</p>
     </footer>

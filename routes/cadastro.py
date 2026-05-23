@@ -9,7 +9,7 @@ def cadastro():
         nome = request.form["nome"]
         email = request.form["email"]
         senha = request.form["senha"]
-        telelfone = request.form["telefone"]
+        telefone = request.form["telefone"]
         endereco = request.form["endereco"]
         cpf = request.form["cpf"]
         
@@ -17,7 +17,7 @@ def cadastro():
         cur = conn.cursor()
         cur.execute(
             "INSERT INTO usuarios (nome, email, senha, telefone, endereco, cpf) VALUES (%s, %s, %s, %s, %s, %s)",
-            (nome, email, senha, telelfone, endereco, cpf)
+            (nome, email, senha, telefone, endereco, cpf)
         )
         
         conn.commit()

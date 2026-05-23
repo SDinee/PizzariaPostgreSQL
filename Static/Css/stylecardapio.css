@@ -15,7 +15,7 @@
   border-radius: 8px;
 }
 
-.cardapio button {
+.cardapio .AddPedido {
     padding: 10px 20px;
     font-size: 15px;
     background-color: #333;
@@ -26,12 +26,24 @@
     transition: 0.3s;
 }
 
-.cardapio button:hover {
+.cardapio .AddPedido:hover {
     background-color: #555;
     transform: scale(1.1);
 }
 
-.cardapio span{
-    font-size: 17px;
-    color: red;
+.LoginRequest {
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #ff0000;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.cardapio .LoginRequest:hover {
+    box-shadow: #ff0000 0px 3px 8px;
+    transform: scale(1.1);
 }

@@ -1,6 +1,6 @@
 .Login{
     display: flex;
-    margin-top: 100px;
+    margin-top: 0px;
     justify-content: center;
     flex-direction: column;
     background-color: #f4b400;
@@ -63,4 +63,37 @@
 .Login button:hover {
     box-shadow: 0 0 5px #a30000;
     transform: scale(1.04);
+}
+
+.mensagens {
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    width: 35%;
+    margin: 50px auto;
+    text-decoration: none;
+    padding: 40px 0px 0px;
+    font-weight: bold;
+}
+
+.info {
+    background-color: blue;
+    box-shadow: blue 0px 3px 10px;
+    border-radius: 10px;
+    color: black;
+}
+
+.warning {
+    background-color: red;
+    box-shadow: #ff0000 0px 3px 10px;
+    border-radius: 10px;
+    color: black;
+}
+
+.success {
+    color: green;
+    background-color: green;
+    box-shadow: green 0px 3px 10px;
+    border-radius: 10px;
+    color: black;
 }
