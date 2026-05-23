@@ -31,7 +31,7 @@
         </div>
     </header>
     
-    <h1>Seu Pedido - Total: R$ {{ total }}</h1>
+    <h1>Seu Pedido - Total: R$ {{ total|round(2) }}</h1>
     <div class="ListaPedido">
         {% for nome, preco, imagem, disponivel in itens %}
             <div class="ItemPedido">
@@ -49,11 +49,32 @@
     {% if not itens %}
         <button class="sempedido">Sem Pedidos</button>
     {% else %}
-        <button class="FinalizarPedido">Finalizar Pedido</button>
+
+    <h2 class="H2TiposPE">Selecione Tipo de entrega e a forma de pagamento para finalizar o pedido.</h2>
+    <div class="TipoPagamentoEntrega">
+        <label for="entrega">Tipo de entrega:</label>
+        <select id="entrega" name="tipo_entrega" required>
+            <option value="">Selecionar</option>
+            <option value="delivery">Delivery</option>
+            <option value="local">Retirar no Local</option>
+        </select>
+
+        <label for="pagamento">Tipo de Pagamento:</label>
+        <select id="pagamento" name="tipo_pagamento" required>
+            <option value="">Selecionar</option>
+            <option value="cartao">Cartão</option>
+            <option value="pix">Pix</option>
+            <option value="dinheiro">Dinheiro</option>
+        </select>
+    </div>
+        <button id="finalizar" class="FinalizarPedido" disabled>Finalizar Pedido</button>
+
     {% endif %}
 
     <footer class="Footer">
         <p class="Pfooter">© 2026 Projeto Pizzaria PostgreSQL. <br>Todos os direitos reservados.</p>
     </footer>
+
+    <script src="{{ url_for('static', filename='js/pedido.js') }}"></script>
 </body>
 </html>

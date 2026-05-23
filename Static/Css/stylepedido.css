@@ -6,6 +6,7 @@
   margin-top: 30px;
   gap: 30px;
   margin-bottom: auto;
+  justify-content: center;
 }
 
 .ItemPedido {
@@ -47,7 +48,7 @@
 }
 
 .FinalizarPedido {
-    margin-top: 100px;
+    margin-top: 20px;
     padding: 15px 20px;
     font-size: 19px;
     background-color: #8b0000;
@@ -74,4 +75,29 @@
   font-weight: bold;
   justify-content: center;
   align-items: center;
+}
+
+.TipoPagamentoEntrega {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.TipoPagamentoEntrega label {
+  background-color: #f4b400;
+  padding: 7px 7px 7px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.TipoPagamentoEntrega select {
+  padding: 7px 7px 7px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.H2TiposPE {
+  text-align: center;
 }
