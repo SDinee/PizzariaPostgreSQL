@@ -34,21 +34,26 @@
 
     <h1>Cardápio</h1>
     <div class="cardapio">
-        {% for nome, preco, imagem in produtos %}
+        {% for nome, preco, imagem, disponivel in produtos %}
         <div class="item">
             <img src="{{ url_for('static', filename='img/cardapio/' ~imagem) }}" alt="{{ nome }}">
             <h3>{{ nome }}</h3>
             <p>Preço: R$ {{ preco }}</p>
 
             {% if session.get("usuario_id") %}
-            <form action="{{ url_for('pedido.pedido') }}" method="POST">
-                <input type="hidden" name="pizza_nome" value="{{ nome }}">
-                <button class="AddPedido" type="submit">Adicionar Pedido</button>
-            </form>
+                {% if disponivel %}
+                    <form action="{{ url_for('pedido.pedido') }}" method="POST">
+                        <input type="hidden" name="pizza_nome" value="{{ nome }}">
+
+                        <button class="AddPedido" type="submit">Adicionar Pedido</button>
+                    </form>
+                {% else %}
+                    <p class="indisponivel" disabled>Indisponível</p>
+                {% endif %}
             {% else %}
-            <a  href="{{ url_for('login.login') }}">
-                <button class="LoginRequest">Realize o login</button>
-            </a>
+                <a  href="{{ url_for('login.login') }}">
+                    <button class="LoginRequest">Realize o login</button>
+                </a>
             {% endif %}
         </div>
         {% endfor %}

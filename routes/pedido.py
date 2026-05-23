@@ -22,7 +22,7 @@ def pedido():
     itens = []
     if "pedido" in session:
         for nome in session["pedido"]:
-            cur.execute("SELECT nome, preco, imagem FROM produtos WHERE nome = %s", (nome,))
+            cur.execute("SELECT nome, preco, imagem, disponivel FROM produtos WHERE nome = %s", (nome,))
             pizza = cur.fetchone()
             if pizza:
                 itens.append(pizza)

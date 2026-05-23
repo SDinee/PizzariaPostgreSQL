@@ -8,7 +8,7 @@ def cardapio():
     conn = get_connection()
     cur = conn.cursor()
     
-    cur.execute("SELECT nome, preco, imagem FROM produtos")
+    cur.execute("SELECT nome, preco, imagem, disponivel FROM produtos")
     produtos = cur.fetchall()
     cur.close()
     conn.close()

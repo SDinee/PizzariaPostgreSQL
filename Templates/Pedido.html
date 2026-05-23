@@ -33,7 +33,7 @@
 
     <h1>Seu Pedido</h1>
     <div>
-        {% for nome, preco, imagem in itens %}
+        {% for nome, preco, imagem, disponivel in itens %}
         <p>
             <img src="{{ url_for('static', filename='img/cardapio/' ~imagem )}}" alt="{{ nome }}">
             {{ nome }} - R$ {{ preco }}
