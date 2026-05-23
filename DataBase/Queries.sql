@@ -18,3 +18,9 @@ WHERE nome = 'Maracanã Napolitana';
 UPDATE produtos
 SET preco = 79.99
 WHERE nome = 'Quatro Queijos';
+
+UPDATE produtos
+SET imagem = 'cocacola.jpeg'
+WHERE nome = 'Coca Cola 2L';
+
+
