@@ -18,7 +18,7 @@
             <nav class="links">
                 <a href="{{ url_for('home.home') }}" target="_self" rel="noopener noreferrer">Home</a>
                 <a href="{{ url_for('cardapio.cardapio') }}" target="_self" rel="noopener noreferrer">Cardápio</a>
-                <a href="{{ url_for('pedido.pedido')}}" target="_self" rel="noopener noreferrer">Pedido</a>
+                <a>Pedido</a>
             </nav>         
             <nav class="direita">
                 {% if session.get("usuario_id") %}
