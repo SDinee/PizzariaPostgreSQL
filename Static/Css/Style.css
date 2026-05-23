@@ -4,7 +4,7 @@ html, body {
 }
 
 body{
-    background-color: #f5efe6;
+    background-color: #ede5da;
     display: flex;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
@@ -14,7 +14,7 @@ body{
     display: flex;
     align-items: center;
     background-color: #8b0000;
-    box-shadow: #af0202 0px 4px 8px;
+    box-shadow: #af0202c7 0px 4px 8px;
 }
 
 
@@ -89,7 +89,7 @@ body{
     margin: 50px auto; /* centraliza horizontalmente e dá uma margem vertical */
     width: 300px;
     text-align: center;
-    padding: 60px 20px;
+    padding: 0px;
 }
 
 .Promocao{
@@ -110,9 +110,7 @@ body{
     border-radius: 12px;
     padding: 20px;
     width: 250px;
-
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.272);
     transition: 0.3s;
 }
 
@@ -128,8 +126,7 @@ body{
 
 .Footer {
     background-color: #8b0000;
-    box-shadow: #af0202 0px 4px 8px;
-    text-align: center;
+    box-shadow: #af0202c7 0px -4px 8px;
     padding: 10px;
     margin-top: auto;
 }
@@ -137,6 +134,7 @@ body{
 .Footer p{
     text-decoration: none;
     color: white;
+    text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6{
