@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylepedido.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <title>PizzariaPostgreSQL</title>
@@ -30,16 +30,23 @@
             </nav>
         </div>
     </header>
-
-    <h1>Seu Pedido</h1>
-    <div>
+    
+    <h1>Seu Pedido - Total: R$ {{ total }}</h1>
+    <div class="ListaPedido">
         {% for nome, preco, imagem, disponivel in itens %}
-        <p>
-            <img src="{{ url_for('static', filename='img/cardapio/' ~imagem )}}" alt="{{ nome }}">
-            {{ nome }} - R$ {{ preco }}
-        </p>
+            <div class="ItemPedido">
+                    <form action="{{ url_for('pedido.remover_item', nome = nome) }}" method="POST" style="display:inline;">
+                        <button type="submit" class="removeritem">X</button>
+                    </form>
+
+                    <img src="{{ url_for('static', filename='img/cardapio/' ~imagem )}}" alt="{{ nome }}">
+                    <h3>{{ nome }}</h3>
+                    <p>Preço: R$ {{ preco }}</p>
+            </div>
         {% endfor %}
     </div>
+
+    <button class="FinalizarPedido">Finalizar Pedido</button>
 
     <footer class="Footer">
         <p class="Pfooter">© 2026 Projeto Pizzaria PostgreSQL. <br>Todos os direitos reservados.</p>

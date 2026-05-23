@@ -35,7 +35,7 @@
 
 .CamposCadastro input {
     padding: 12px;
-    font-size: 16px;
+    font-size: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
     width: 100%;
@@ -44,6 +44,7 @@
 .CamposCadastro input:focus{
     border-color: #8b0000;
     box-shadow: 0 0 5px rgba(139,0,0,0.4);
+    outline: none;
 }
 
 .Cadastro button {

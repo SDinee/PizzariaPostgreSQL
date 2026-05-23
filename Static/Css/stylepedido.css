@@ -1,0 +1,61 @@
+.ListaPedido {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.ItemPedido {
+  width: 200px;
+  text-align: center;
+  background-color: white;
+  box-shadow: rgb(77, 77, 77) 0px 3px 8px;
+  border-radius: 10px;
+  padding: 25px 25px 25px;
+  position: relative;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ItemPedido img {
+  width: 180px;
+  height: 180px;
+  border-radius: 8px;
+}
+
+.removeritem {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: transparent;
+    border: none;
+    color: #8b0000;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.removeritem:hover {
+    color: #a30000;
+    transform: scale(1.2);
+}
+
+.FinalizarPedido {
+    margin-top: 100px;
+    padding: 15px 20px;
+    font-size: 19px;
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    align-self: center;
+}
+
+.FinalizarPedido:hover {
+    box-shadow: 0 0 5px #a30000;
+    transform: scale(1.04);
+}

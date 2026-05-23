@@ -28,5 +28,15 @@ def pedido():
                 itens.append(pizza)
     cur.close()
     conn.close()
+    
+    total = sum([float(item[1]) for item in itens])
 
-    return render_template("pedido.html", itens=itens)
+    return render_template("pedido.html", itens = itens, total = total)
+
+@pedido_bp.route("/remover/<nome>", methods=["POST"])
+def remover_item(nome):
+    if "pedido" in session:
+        if nome in session["pedido"]:
+            session["pedido"].remove(nome)
+            session.modified = True
+    return redirect(url_for("pedido.pedido"))
