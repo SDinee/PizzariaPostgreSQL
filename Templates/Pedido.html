@@ -46,7 +46,11 @@
         {% endfor %}
     </div>
 
-    <button class="FinalizarPedido">Finalizar Pedido</button>
+    {% if not itens %}
+        <button class="sempedido">Sem Pedidos</button>
+    {% else %}
+        <button class="FinalizarPedido">Finalizar Pedido</button>
+    {% endif %}
 
     <footer class="Footer">
         <p class="Pfooter">© 2026 Projeto Pizzaria PostgreSQL. <br>Todos os direitos reservados.</p>

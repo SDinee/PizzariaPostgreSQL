@@ -1,12 +1,16 @@
 .ListaPedido {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 30px;
   gap: 30px;
+  margin-bottom: auto;
 }
 
 .ItemPedido {
   width: 200px;
-  text-align: center;
+  align-items: center;
   background-color: white;
   box-shadow: rgb(77, 77, 77) 0px 3px 8px;
   border-radius: 10px;
@@ -14,6 +18,7 @@
   position: relative;
   flex-direction: column;
   gap: 5px;
+  text-align: center;
 }
 
 .ItemPedido img {
@@ -58,4 +63,15 @@
 .FinalizarPedido:hover {
     box-shadow: 0 0 5px #a30000;
     transform: scale(1.04);
+}
+
+.sempedido {
+  display: flex;
+  font-size: 25px;
+  background: transparent;
+  color: rgb(255, 0, 0);
+  border: none;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,9 +1,6 @@
 html, body {
     height: 100%;
     margin: 0;
-}
-
-body{
     background-color: #fff5dc;
     display: flex;
     flex-direction: column;
@@ -124,6 +121,7 @@ body{
     box-shadow: #8b0000 0px -3px 8px;
     padding: 10px;
     margin-top: auto;
+    width: auto;
 }
 
 .Footer p{
