@@ -33,15 +33,15 @@
     
     <h1>Seu Pedido - Total: R$ {{ total|round(2) }}</h1>
     <div class="ListaPedido">
-        {% for nome, preco, imagem, disponivel in itens %}
+        {% for nome, preco, imagem, disponivel, quantidade in itens %}
             <div class="ItemPedido">
                     <form action="{{ url_for('pedido.remover_item', nome = nome) }}" method="POST" style="display:inline;">
                         <button type="submit" class="removeritem">X</button>
                     </form>
 
                     <img src="{{ url_for('static', filename='img/cardapio/' ~imagem )}}" alt="{{ nome }}">
-                    <h3>{{ nome }}</h3>
-                    <p>Preço: R$ {{ preco }}</p>
+                    <h3>{{ nome }} (x{{ quantidade }}) </h3>
+                    <p>Preço: R$ {{ "%.2f"|format(preco * quantidade) }}</p>
             </div>
         {% endfor %}
     </div>
@@ -51,24 +51,26 @@
     {% else %}
 
     <h2 class="H2TiposPE">Selecione Tipo de entrega e a forma de pagamento para finalizar o pedido.</h2>
-    <div class="TipoPagamentoEntrega">
-        <label for="entrega">Tipo de entrega:</label>
-        <select id="entrega" name="tipo_entrega" required>
-            <option value="">Selecionar</option>
-            <option value="delivery">Delivery</option>
-            <option value="local">Retirar no Local</option>
-        </select>
+    
+    <form class="FormPagamentos" action="{{ url_for('finalizar.finalizar_pedido') }}" method="POST">
+        <div class="TipoPagamentoEntrega">
+            <label for="entrega">Tipo de entrega:</label>
+            <select id="entrega" name="tipo_entrega" required>
+                <option value="">Selecionar</option>
+                <option value="delivery">Delivery</option>
+                <option value="local">Retirar no Local</option>
+            </select>
 
-        <label for="pagamento">Tipo de Pagamento:</label>
-        <select id="pagamento" name="tipo_pagamento" required>
-            <option value="">Selecionar</option>
-            <option value="cartao">Cartão</option>
-            <option value="pix">Pix</option>
-            <option value="dinheiro">Dinheiro</option>
-        </select>
-    </div>
-        <button id="finalizar" class="FinalizarPedido" disabled>Finalizar Pedido</button>
-
+            <label for="pagamento">Tipo de Pagamento:</label>
+            <select id="pagamento" name="tipo_pagamento" required>
+                <option value="">Selecionar</option>
+                <option value="cartao">Cartão</option>
+                <option value="pix">Pix</option>
+                <option value="dinheiro">Dinheiro</option>
+            </select>
+        </div>
+            <button id="finalizar" class="FinalizarPedido" disabled>Finalizar Pedido</button>
+    </form>
     {% endif %}
 
     <footer class="Footer">

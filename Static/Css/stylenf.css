@@ -1,0 +1,72 @@
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.30);
+    
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+
+.CamposNF {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.CamposNF p {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #fff;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-size: 20px;
+}
+
+table th {
+    background-color: #eee;
+    font-weight: bold;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a {
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    background: #007bff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 15px;
+    align-items: center;
+    transition: 0.3s ease;
+    margin: auto;
+}
+
+a:hover {
+    background: #0056b3;
+}

@@ -77,12 +77,6 @@
   align-items: center;
 }
 
-.TipoPagamentoEntrega {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
 .TipoPagamentoEntrega label {
   background-color: #f4b400;
   padding: 7px 7px 7px;
@@ -100,4 +94,12 @@
 
 .H2TiposPE {
   text-align: center;
+}
+
+.FormPagamentos {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }

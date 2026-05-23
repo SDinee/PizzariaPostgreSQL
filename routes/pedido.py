@@ -13,7 +13,13 @@ def pedido():
     # Se for POST, adiciona pizza ao pedido
     if request.method == "POST":
         pizza_nome = request.form["pizza_nome"]
-        session.setdefault("pedido", []).append(pizza_nome)
+        if "pedido" not in session:
+            session["pedido"] = {}
+
+        if pizza_nome in session["pedido"]:
+            session["pedido"][pizza_nome] += 1
+        else:
+            session["pedido"][pizza_nome] = 1
         session.modified = True # garante que a sessão será atualizada
 
     # Carrega itens do pedido (funciona para GET e POST)
@@ -21,15 +27,17 @@ def pedido():
     cur = conn.cursor()
     itens = []
     if "pedido" in session:
-        for nome in session["pedido"]:
-            cur.execute("SELECT nome, preco, imagem, disponivel FROM produtos WHERE nome = %s", (nome,))
+        for nome, qtd in session["pedido"].items():
+            cur.execute("SELECT preco, imagem, disponivel FROM produtos WHERE nome = %s", (nome,))
             pizza = cur.fetchone()
             if pizza:
-                itens.append(pizza)
+                # pizza = (preco, imagem, disponivel)
+                itens.append((nome, pizza[0], pizza[1], pizza[2], qtd))
+
     cur.close()
     conn.close()
     
-    total = sum([float(item[1]) for item in itens])
+    total = sum([float(preco) * qtd for _, preco, _, _, qtd in itens])
 
     return render_template("pedido.html", itens = itens, total = total)
 
@@ -37,6 +45,9 @@ def pedido():
 def remover_item(nome):
     if "pedido" in session:
         if nome in session["pedido"]:
-            session["pedido"].remove(nome)
+            if session["pedido"][nome] > 1:
+                session["pedido"][nome] -= 1
+            else:
+                del session["pedido"][nome]
             session.modified = True
     return redirect(url_for("pedido.pedido"))
