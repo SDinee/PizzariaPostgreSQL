@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="static/img/PizzariaLogo.png" alt="Logo da Pizzaria" width="200"/>
+  <img src="Static/Img/PizzariaLogo.png" alt="Logo da Pizzaria" width="200"/>
 </p>
 
 <h1 align="center">🍕 Sistema de Pizzaria - Full Stack (Flask + PostgreSQL)</h1>
@@ -12,15 +12,15 @@
 
 | Página Inicial | Cadastro |
 |----------------|----------|
-| <img src="static/img/imgsprojeto/home.JPG" width="600"/> | <img src="static/img/imgsprojeto/cadastro.JPG" width="600"/> |
+| <img src="Static/Img/imgsprojeto/home.JPG" width="600"/> | <img src="static/img/imgsprojeto/cadastro.JPG" width="600"/> |
 
 | Login | Cardápio |
 |-------|----------|
-| <img src="static/img/imgsprojeto/pedidosemlogin.JPG" width="600"/> | <img src="static/img/imgsprojeto/cardapio.JPG" width="600"/> |
+| <img src="Static/Img/imgsprojeto/pedidosemlogin.JPG" width="600"/> | <img src="static/img/imgsprojeto/cardapio.JPG" width="600"/> |
 
 | Pedido | Nota Fiscal |
 |--------|-------------|
-| <img src="static/img/imgsprojeto/pedidos.JPG" width="600"/> | <img src="static/img/imgsprojeto/notafiscal.JPG" width="600"/> |
+| <img src="Static/Img/imgsprojeto/pedidos.JPG" width="600"/> | <img src="static/img/imgsprojeto/notafiscal.JPG" width="600"/> |
 
 ## 💻 Ferramentas e Tecnologias
 
