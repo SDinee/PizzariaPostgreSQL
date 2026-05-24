@@ -157,14 +157,21 @@ O projeto também conta com páginas iniciais desenvolvidas em HTML e CSS:
     
 4. **Conectar Banco**
     ```bash
-    ## você também precisa ter o PostgreSQL instalado na sua máquina, porque o psycopg2 é só o driver que faz a ponte entre o Python e o banco.
+    # você também precisa ter o PostgreSQL instalado na sua máquina, porque o psycopg2 é só o driver que faz a ponte entre o Python e o banco.
     Após instalar o PostgreSQL, execute os scripts `schema.sql` e `seed.sql` localizados na pasta `database/` para criar e popular o banco de dados.
 
-    ## Ir na pasta database alterar os valores dentro de db.py para os que você escolheu em seu postgres, Se está utilizando tudo padrão só alterar a senha.
+    # Criar arquivo `.env`
+        DB_HOST=localhost
+        DB_NAME=postgres
+        DB_USER=postgres
+        DB_PASSWORD=sua_senha
+        DB_PORT=5432
+
+        SECRET_KEY=sua_chave_secreta
 
 5. **Iniciar**
     ```bash
-    ## Após todos os passos só iniciar app.py
+    # Após todos os passos só iniciar app.py
     python app.py
 
 ## 📌 Observações
