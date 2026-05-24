@@ -25,7 +25,7 @@
 ## 💻 Ferramentas e Tecnologias
 
 [![My Skills](https://skillicons.dev/icons?i=postgresql,flask,html,css,python,git,github,vscode)](https://skillicons.dev)
-- **[PostgreSQL](https://www.postgresql.org/docs/18/index.htmlL)**  
+- **[PostgreSQL](https://www.postgresql.org/docs/18/index.html)**  
 - **[Flask](https://flask.palletsprojects.com/en/stable/quickstart/)**  
 - **[HTML](https://www.w3schools.com/Html/)**  
 - **[CSS](https://www.w3schools.com/css/default.asp)**  
