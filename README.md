@@ -5,7 +5,7 @@
 <h1 align="center">🍕 Sistema de Pizzaria - Full Stack (Flask + PostgreSQL)</h1>
 
 <p align="center">
-  Aplicação web de pizzaria desenvolvida em Flask (Python) com PostgreSQL, HTML e CSS, criada para praticar conceitos de desenvolvimento full stack, modelagem de banco de dados e organização de projetos.
+  Sistema web de pizzaria desenvolvido com Flask, PostgreSQL, HTML e CSS, criado com foco em aprendizado de desenvolvimento full stack, integração backend/frontend e modelagem relacional de banco de dados.
 </p>
 
 ## 📸 Screenshots
@@ -32,6 +32,18 @@
 - **[Python](https://www.w3schools.com/python/default.asp)** 
 - **[Git](https://www.w3schools.com/git/default.asp?remote=github)**
 - **[Visual Studio Code](https://code.visualstudio.com/docs)**
+
+## 📚 Aprendizados
+
+Durante o desenvolvimento deste projeto, pratiquei:
+
+- Integração entre Flask e PostgreSQL
+- Estruturação de aplicações web
+- Organização de rotas com Blueprints
+- Modelagem relacional
+- Responsividade e estilização com CSS
+- Validação de dados e regras de negócio
+- Manipulação de sessões/login
 
 ## 🎯 Funcionalidades
 
@@ -141,16 +153,12 @@ O projeto também conta com páginas iniciais desenvolvidas em HTML e CSS:
 
 3. **Instale as dependências**
     ```bash
-    ## Esse comando vai baixar e instalar Flask (framework web) e psycopg2 (driver PostgreSQL) de uma vez só no ambiente ativo
-    pip install flask psycopg2
-
-    ## Se estiver no Windows e der erro com psycopg2, usa:
-    pip install psycopg2-binary
-
+    pip install -r requirements.txt
+    
 4. **Conectar Banco**
     ```bash
     ## você também precisa ter o PostgreSQL instalado na sua máquina, porque o psycopg2 é só o driver que faz a ponte entre o Python e o banco.
-    Após PostgresSQL instalado abrir e executar os itens dentro do database **(Schema e Seed)**
+    Após instalar o PostgreSQL, execute os scripts `schema.sql` e `seed.sql` localizados na pasta `database/` para criar e popular o banco de dados.
 
     ## Ir na pasta database alterar os valores dentro de db.py para os que você escolheu em seu postgres, Se está utilizando tudo padrão só alterar a senha.
 
