@@ -1,19 +1,57 @@
-# 🍕 Sistema de Pizzaria - Full Stack (Flask + PostgreSQL)
+<p align="center">
+  <img src="static/img/PizzariaLogo.png" alt="Logo da Pizzaria" width="200"/>
+</p>
 
-Projeto desenvolvido com o objetivo de praticar o desenvolvimento full stack utilizando Flask (Python), PostgreSQL, HTML e CSS, enquanto ainda estou em processo de aprendizado das tecnologias.
+<h1 align="center">🍕 Sistema de Pizzaria - Full Stack (Flask + PostgreSQL)</h1>
 
----
+<p align="center">
+  Aplicação web de pizzaria desenvolvida em Flask (Python) com PostgreSQL, HTML e CSS, criada para praticar conceitos de desenvolvimento full stack, modelagem de banco de dados e organização de projetos.
+</p>
+
+## 📸 Screenshots
+
+| Página Inicial | Cadastro |
+|----------------|----------|
+| <img src="static/img/imgsprojeto/home.JPG" width="600"/> | <img src="static/img/imgsprojeto/cadastro.JPG" width="600"/> |
+
+| Login | Cardápio |
+|-------|----------|
+| <img src="static/img/imgsprojeto/pedidosemlogin.JPG" width="600"/> | <img src="static/img/imgsprojeto/cardapio.JPG" width="600"/> |
+
+| Pedido | Nota Fiscal |
+|--------|-------------|
+| <img src="static/img/imgsprojeto/pedidos.JPG" width="600"/> | <img src="static/img/imgsprojeto/notafiscal.JPG" width="600"/> |
+
+## 💻 Ferramentas e Tecnologias
+
+[![My Skills](https://skillicons.dev/icons?i=postgresql,flask,html,css,python,git,github,vscode)](https://skillicons.dev)
+- **[PostgreSQL](https://www.postgresql.org/docs/18/index.htmlL)**  
+- **[Flask](https://flask.palletsprojects.com/en/stable/quickstart/)**  
+- **[HTML](https://www.w3schools.com/Html/)**  
+- **[CSS](https://www.w3schools.com/css/default.asp)**  
+- **[Python](https://www.w3schools.com/python/default.asp)** 
+- **[Git](https://www.w3schools.com/git/default.asp?remote=github)**
+- **[Visual Studio Code](https://code.visualstudio.com/docs)**
+
+## 🎯 Funcionalidades
+
+- ✅ Cadastro de usuários  
+- ✅ Login  
+- ✅ Exibição de cardápio com imagens  
+- ✅ Realização de pedidos  
+- ✅ Finalização de pedidos com nota fiscal  
+- ✅ Regras de negócio aplicadas no banco (restrições, integridade, validações)  
+- ✅ Mensagens de feedback ao usuário  
 
 ## 🧠 Conceitos aplicados
 
-* Criação de tabelas com `CREATE TABLE`
-* Uso de `PRIMARY KEY` e `FOREIGN KEY`
-* Regras de integridade com `ON DELETE` (RESTRICT, CASCADE)
-* Validações com `CHECK`
-* Uso de `UNIQUE` para evitar duplicidade de dados
-* Tipos de dados adequados (VARCHAR, CHAR, NUMERIC, TIMESTAMP)
-
----
+- **[Criação de tabelas](https://www.w3schools.com/sql/sql_create_table.asp)** com `CREATE TABLE`
+- **[Chave primária](https://www.w3schools.com/sql/sql_primarykey.asp)** (`PRIMARY KEY`, `FOREIGN KEY`)
+- **[Chave estrangeira](https://www.w3schools.com/sql/sql_foreignkey.asp)** (`FOREIGN KEY`)
+- **[Regras de integridade](https://www.bosontreinamentos.com.br/mysql/opcoes-de-chave-estrangeira-mysql/)** com `ON DELETE` (`RESTRICT`, `CASCADE`)
+- **[Validações](https://www.tutorialspoint.com/sql/sql-check-constraint.htm)** com `CHECK`
+- **[Restrições de unicidade](https://www.w3schools.com/sql/sql_unique.asp)** com `UNIQUE`
+- Tipos de dados adequados (`VARCHAR`, `CHAR`, `NUMERIC`, `TIMESTAMP`)
 
 ## 🗂️ Estrutura do Banco
 
@@ -24,8 +62,6 @@ O sistema foi modelado com as seguintes entidades:
 * **produtos** → Lista de produtos disponíveis
 * **itens_pedido** → Relaciona pedidos e produtos (itens do pedido)
 
----
-
 ## 🔗 Relacionamentos
 
 * Um usuário pode ter vários pedidos
@@ -33,8 +69,6 @@ O sistema foi modelado com as seguintes entidades:
 * Um pedido pode conter vários produtos
 * Produtos não podem ser removidos se já estiverem vinculados a pedidos
 * Ao excluir um pedido, seus itens são removidos automaticamente
-
----
 
 ## ⚙️ Regras de negócio implementadas
 
@@ -45,8 +79,6 @@ O sistema foi modelado com as seguintes entidades:
 * Quantidade de itens deve ser maior que zero
 * Preço dos produtos não pode ser negativo
 
----
-
 ## 🌐 Interface do sistema (Frontend)
 
 O projeto também conta com páginas iniciais desenvolvidas em HTML e CSS:
@@ -56,48 +88,80 @@ O projeto também conta com páginas iniciais desenvolvidas em HTML e CSS:
 * Criado **Login.html** para autenticação de usuários com campos de nome e senha
 * Criado **Cardapio.html** para exibição do cardápio com links de navegação
 * Criado **Pedido.html** para realização de pedidos com links de navegação
+* Criado  **Nota_fiscal.html** → Exibição da nota fiscal com itens e totais
 * Adicionada **PizzariaLogo.png** como logotipo do projeto
 * Incluídos arquivos CSS para estilização das páginas
 
----
+## 🚀 Backend com Python/Flask
 
-### 🚀 Backend com Python/Flask
+- Rotas limpas (`/`, `/cardapio`, `/pedido`, etc.)  
+- Templates renderizados com `render_template()`  
+- Arquivos estáticos servidos via `url_for('static', filename='...')`  
+- Organização da pasta `static/` em `css/` e `img/`  
+- Navbar com navegação consistente  
+- Modularização com **Blueprints**  
+- Sistema de login e logout  
+- Mensagens de feedback (ex: *Cadastro realizado com sucesso!*)  
+- Restrição de pedidos sem login (redireciona para login com aviso) 
 
-* implementadas rotas limpas no Flask (/, /cardapio, /pedido, etc.), sem necessidade de usar .html na URL.
-* Ajustados os templates para renderização via render_template() em vez de links diretos para arquivos .html.
-* Corrigida a forma de servir arquivos estáticos (CSS e imagens) utilizando url_for('static', filename='...').
-* Reorganizada a pasta static/ em subdiretórios (css/ e img/) para melhor organização.
-* Navbar atualizada para usar url_for() e manter navegação consistente entre páginas.
-* Logo e imagens agora carregadas corretamente via static/img/.
-* Implementação de Bluesprints para modularização das paginas.
+### 📂 Estrutura do Projeto
 
-### Estrutura final do projeto:
-- app.py → lógica principal do Flask
-- templates/ → páginas HTML renderizadas
-- static/css/ → arquivos de estilo
-- static/img/ → imagens e logotipo
-- routes/ → separar rotas de cadastro, login e cardapio.
-- database/ → para armazenar scripts SQL e o módulo db.py responsável pela conexão com o PostgreSQL.
-- Sistema de login, com opção de logout.
-- Mensagens de feedback(Cadastro realizado com sucesso!)
-- Restrição em pedido sem login com mensagem de feedback e redirecionamento a página de login.
+    pizzariapostgresql/
+    │
+    ├── app.py               # Inicialização do Flask
+    ├── routes/              # Rotas separadas (home, cardápio, pedido, login, cadastro)
+    ├── templates/           # Páginas HTML
+    ├── static/
+    │   ├── css/             # Estilos
+    │   ├── img/             # Logo e imagens
+    │   ├── img/cardapio/    # Imagens do cardápio
+    │   └── js/              # Script simples
+    └── database/
+        ├── db.py            # Conexão PostgreSQL
+        ├── schema.sql       # Estrutura do banco
+        ├── seed.sql         # Dados iniciais
+        └── queries.sql      # Ajustes durante a criação 
 
----
+## ▶️ Como usar
 
-## 🛠️ Tecnologias utilizadas
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/SDinee/PizzariaPostgreSQL
 
-* PostgreSQL
-* HTML
-* CSS
-* Python / Flask
+2. **Crie e ative um ambiente virtual (opcional, mas recomendado)**
+    ```bash
+    # criar ambiente virtual
+    python -m venv venv
 
----
+    # ativar no Linux/Mac
+    source venv/bin/activate
+
+    # ativar no Windows
+    venv\Scripts\activate
+
+3. **Instale as dependências**
+    ```bash
+    ## Esse comando vai baixar e instalar Flask (framework web) e psycopg2 (driver PostgreSQL) de uma vez só no ambiente ativo
+    pip install flask psycopg2
+
+    ## Se estiver no Windows e der erro com psycopg2, usa:
+    pip install psycopg2-binary
+
+4. **Conectar Banco**
+    ```bash
+    ## você também precisa ter o PostgreSQL instalado na sua máquina, porque o psycopg2 é só o driver que faz a ponte entre o Python e o banco.
+    Após PostgresSQL instalado abrir e executar os itens dentro do database **(Schema e Seed)**
+
+    ## Ir na pasta database alterar os valores dentro de db.py para os que você escolheu em seu postgres, Se está utilizando tudo padrão só alterar a senha.
+
+5. **Iniciar**
+    ```bash
+    ## Após todos os passos só iniciar app.py
+    python app.py
 
 ## 📌 Observações
 
 Este projeto tem fins educacionais e foi desenvolvido como parte do meu processo de aprendizado em Análise e Desenvolvimento de Sistemas.
-
----
 
 ## 👨‍💻 Autor
 

@@ -1,11 +1,15 @@
-INSERT INTO produtos (nome, preco, imagem)
-VALUES
-('Maracanã Napolitana', 120.99, 'pizzamaracananapolitana.png');
+-- =========================
+-- 📥 Inserção de Produtos
+-- =========================
 
 INSERT INTO produtos (nome, preco, imagem, disponivel)
 VALUES
-('Quatro Queijos', 120.99, 'quatroqueijos.jpeg', FALSE);
+('Maracanã Napolitana', 120.99, 'pizzamaracananapolitana.jpeg', TRUE);
 
-INSERT INTO produtos(nome,preco,imagem, disponivel)
+INSERT INTO produtos (nome, preco, imagem, disponivel)
+VALUES
+('Quatro Queijos', 79.99, 'quatroqueijos.jpeg', FALSE);
+
+INSERT INTO produtos (nome, preco, imagem, disponivel)
 VALUES 
-('Coca Cola 2L', 12.99, 'cocacola.png', TRUE);
+('Coca Cola 2L', 12.99, 'cocacola.jpeg', TRUE);
