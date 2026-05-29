@@ -161,7 +161,7 @@ O projeto também conta com páginas iniciais desenvolvidas em HTML e CSS:
     Após instalar o PostgreSQL, execute os scripts `schema.sql` e `seed.sql` localizados na pasta `database/` para criar e popular o banco de dados.
 
     # Criar arquivo `.env`
-        DB_HOST=_localhost
+        DB_HOST=localhost
         DB_NAME=exemplo_nome
         DB_USER=exemplo_user
         DB_PASSWORD=exemplo_senha_ultra_secreta
