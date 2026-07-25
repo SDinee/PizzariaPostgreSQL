@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Static/Img/PizzariaLogo.png" alt="Logo da Pizzaria" width="200"/>
+  <img src="static/Img/PizzariaLogo.png" alt="Logo da Pizzaria" width="200"/>
 </p>
 
 <h1 align="center">🍕 Sistema de Pizzaria - Full Stack (Flask + PostgreSQL)</h1>
@@ -12,15 +12,15 @@
 
 | Página Inicial | Cadastro |
 |----------------|----------|
-| <img src="Static/Img/imgsprojeto/home.JPG" width="600"/> | <img src="Static/Img/imgsprojeto/cadastro.JPG" width="600"/> |
+| <img src="static/Img/imgsprojeto/home.JPG" width="600"/> | <img src="static/Img/imgsprojeto/cadastro.JPG" width="600"/> |
 
 | Login | Cardápio |
 |-------|----------|
-| <img src="Static/Img/imgsprojeto/pedidosemlogin.JPG" width="600"/> | <img src="Static/Img/imgsprojeto/cardapio.JPG" width="600"/> |
+| <img src="static/Img/imgsprojeto/pedidosemlogin.JPG" width="600"/> | <img src="static/Img/imgsprojeto/cardapio.JPG" width="600"/> |
 
 | Pedido | Nota Fiscal |
 |--------|-------------|
-| <img src="Static/Img/imgsprojeto/pedidos.JPG" width="600"/> | <img src="Static/Img/imgsprojeto/notafiscal.JPG" width="600"/> |
+| <img src="static/Img/imgsprojeto/pedidos.JPG" width="600"/> | <img src="static/Img/imgsprojeto/notafiscal.JPG" width="600"/> |
 
 ## 💻 Ferramentas e Tecnologias
 
@@ -95,13 +95,13 @@ O sistema foi modelado com as seguintes entidades:
 
 O projeto também conta com páginas iniciais desenvolvidas em HTML e CSS:
 
-* Criado **Index.html** como página inicial com mensagem de boas-vindas e promoções do dia
-* Criado **Cadastro.html** para registro de usuários com campos de nome, email, senha, telefone, endereço e CPF
-* Criado **Login.html** para autenticação de usuários com campos de nome e senha
-* Criado **Cardapio.html** para exibição do cardápio com links de navegação
-* Criado **Pedido.html** para realização de pedidos com links de navegação
-* Criado  **Nota_fiscal.html** → Exibição da nota fiscal com itens e totais
-* Adicionada **PizzariaLogo.png** como logotipo do projeto
+* Criado **index.html** como página inicial com mensagem de boas-vindas e promoções do dia
+* Criado **cadastro.html** para registro de usuários com campos de nome, email, senha, telefone, endereço e CPF
+* Criado **login.html** para autenticação de usuários com campos de nome e senha
+* Criado **cardapio.html** para exibição do cardápio com links de navegação
+* Criado **pedido.html** para realização de pedidos com links de navegação
+* Criado  **nota_fiscal.html** → Exibição da nota fiscal com itens e totais
+* Adicionada **pizzariaLogo.png** como logotipo do projeto
 * Incluídos arquivos CSS para estilização das páginas
 
 ## 🚀 Backend com Python/Flask
