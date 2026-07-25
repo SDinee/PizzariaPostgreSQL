@@ -12,15 +12,15 @@
 
 | Página Inicial | Cadastro |
 |----------------|----------|
-| <img src="static/Img/imgsprojeto/home.JPG" width="600"/> | <img src="static/Img/imgsprojeto/cadastro.JPG" width="600"/> |
+| <img src="static/img/imgsprojeto/home.JPG" width="600"/> | <img src="static/img/imgsprojeto/cadastro.JPG" width="600"/> |
 
 | Login | Cardápio |
 |-------|----------|
-| <img src="static/Img/imgsprojeto/pedidosemlogin.JPG" width="600"/> | <img src="static/Img/imgsprojeto/cardapio.JPG" width="600"/> |
+| <img src="static/img/imgsprojeto/pedidosemlogin.JPG" width="600"/> | <img src="static/img/imgsprojeto/cardapio.JPG" width="600"/> |
 
 | Pedido | Nota Fiscal |
 |--------|-------------|
-| <img src="static/Img/imgsprojeto/pedidos.JPG" width="600"/> | <img src="static/Img/imgsprojeto/notafiscal.JPG" width="600"/> |
+| <img src="static/img/imgsprojeto/pedidos.JPG" width="600"/> | <img src="static/img/imgsprojeto/notafiscal.JPG" width="600"/> |
 
 ## 💻 Ferramentas e Tecnologias
 
