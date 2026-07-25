@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="static/Img/PizzariaLogo.png" alt="Logo da Pizzaria" width="200"/>
+  <img src="static/img/PizzariaLogo.png" alt="Logo da Pizzaria" width="200"/>
 </p>
 
 <h1 align="center">🍕 Sistema de Pizzaria - Full Stack (Flask + PostgreSQL)</h1>
