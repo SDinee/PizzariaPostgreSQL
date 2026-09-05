@@ -8,6 +8,11 @@
   Sistema web de pizzaria desenvolvido com Flask, PostgreSQL, HTML e CSS, criado com foco em aprendizado de desenvolvimento full stack, integração backend/frontend e modelagem relacional de banco de dados.
 </p>
 
+<p align="center">
+  <a href="https://github.com/SDinee/PizzariaPostgreSQL/commits/main"><img src="https://img.shields.io/github/last-commit/SDinee/PizzariaPostgreSQL?style=for-the-badge&color=green" alt="Last Commit"></a>
+  <img src="https://img.shields.io/github/repo-size/SDinee/PizzariaPostgreSQL?style=for-the-badge&color=orange" alt="Repo Size">
+</p>
+
 ## 📸 Screenshots
 
 | Página Inicial | Cadastro |
